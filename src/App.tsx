@@ -10,7 +10,7 @@ const confetti = Array.from({ length: 24 }, (_, index) => ({
 }));
 
 // رمز عبور دلخواه
-const CORRECT_PASSCODE = "bet";
+const CORRECT_PASSCODE = "1234";
 
 function Autograph() {
   const reduceMotion = useReducedMotion();
@@ -97,10 +97,10 @@ export default function App() {
 
   return (
     <main className="celebration-page">
-      {/* تصویر پس‌زمینه اصلی */}
+      {/* تصویر پس‌زمینه اصلی با آدرس‌دهی هوشمند برای GitHub Pages */}
       <img
         className="london-painting"
-        src="/images/london-oil-painting.jpg"
+        src={`${import.meta.env.BASE_URL}images/london-oil-painting.jpg`}
         alt="An oil painting of London glowing at sunset"
         decoding="async"
         fetchPriority="high"
@@ -227,7 +227,7 @@ export default function App() {
           </motion.div>
         ) : (
           /* ---------------------------------------------------- */
-          /* ۲. صفحه اصلی تبریک (موقعیت امضا کاملاً در جای اول)   */
+          /* ۲. صفحه اصلی تبریک                                   */
           /* ---------------------------------------------------- */
           <motion.div
             key="main-screen"
@@ -315,7 +315,6 @@ export default function App() {
               </motion.button>
             </section>
 
-            {/* امضا دقیقا در همان لایه و موقعیت مطلق اولیه */}
             <Autograph />
           </motion.div>
         )}
