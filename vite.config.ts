@@ -9,8 +9,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  // به جای REPOSITORY-NAME نام دقیق ریپازیتوری گیت‌هاب خودت را بگذار
-  base: "/REPOSITORY-A-little-note-from-London/",
+  base: "/A-little-note-from-London/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
