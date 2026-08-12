@@ -10,7 +10,7 @@ const confetti = Array.from({ length: 24 }, (_, index) => ({
 }));
 
 // رمز عبور دلخواه
-const CORRECT_PASSCODE = "bet";
+const CORRECT_PASSCODE = "London";
 
 function Autograph() {
   const reduceMotion = useReducedMotion();
